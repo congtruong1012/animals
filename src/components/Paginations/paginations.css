@@ -1,0 +1,28 @@
+.paginations{
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginations__item {
+  margin-right: 16px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.paginations__item:disabled{
+  border-color: #ddd;
+}
+
+.paginations__item--active {
+  background-color: #d7cece;
+}
+

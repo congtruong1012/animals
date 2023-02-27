@@ -1,0 +1,12 @@
+.animal{}
+.animal__image {
+  height: 200px;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animal__image > img {
+  height: 100%;
+  width: 100%;
+}

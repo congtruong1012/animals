@@ -1,0 +1,63 @@
+.main{
+  max-width: var(--container);
+  margin: 16px auto;
+  padding: 16px 0;
+
+}
+
+.main__wrapper{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: -16px 0 0 -16px;
+  width: calc(100% + 16px);
+}
+
+.main__item {
+  width: calc(25% - 16px);
+  margin: 16px 0 0 16px;
+}
+
+.animal-skeleton {
+  margin: 8px 0;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.skeleton--text {
+  width: var(--text);
+  height: 16px;
+  border-radius: 0.75rem;
+}
+
+.linear-progress {
+  background-color: var(--primary);
+  height: 8px;
+  border-radius: 0.75rem;
+  animation: linear-progress 3s linear infinite alternate;
+}
+
+@keyframes linear-progress {
+  0% {
+   width: 0px;
+  }
+  50% {
+   width: 50%;
+  }
+  100% {
+   width: 100%;
+  }
+}
+
