@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./paginations.css";
 function Paginations({ currentPage = 987, totalPage = 1000, onChangePage }) {
-  console.log("Paginations  totalPage", totalPage);
   const [page, setPage] = useState(currentPage);
 
   const getPaginationButtons = () => {

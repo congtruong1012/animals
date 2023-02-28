@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import noImage from "../../Images/no-image.png";
 
 function Image(props) {
-  const { src, alt, className, fallback = noImage, ...rest } = props;
+  const { src = noImage, alt, className, fallback = noImage, ...rest } = props;
 
   return (
     <img

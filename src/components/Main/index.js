@@ -51,11 +51,11 @@ function Main(props) {
                 <p>No Animals</p>
               )}
             </div>
-            {isLoading && !isLoadFirst && (
-              <div style={{ margin: "16px 0" }}>
+            <div style={{ margin: "16px 0" }}>
+              {isLoading && !isLoadFirst && (
                 <div className="linear-progress"></div>
-              </div>
-            )}
+              )}
+            </div>
             <Paginations
               currentPage={page?.current_page}
               totalPage={page?.total_pages}

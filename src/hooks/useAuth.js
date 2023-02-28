@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axiosClient from "../apis";
 
-export default function useAuth({ onSuccess }) {
+export default function useAuth() {
   const [token, setToken] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const nav = useNavigate();
 
   const handleLogin = async () => {
     setIsLoading((prev) => !prev);
@@ -14,8 +17,13 @@ export default function useAuth({ onSuccess }) {
     });
     setIsLoading((prev) => !prev);
     setToken(resp);
-    onSuccess();
+    nav("/");
   };
 
-  return { isLoading, token, handleLogin };
+  const handleLogout = () => {
+    setToken(null);
+    nav("/login");
+  };
+
+  return { isLoading, token, handleLogin, handleLogout };
 }

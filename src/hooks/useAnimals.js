@@ -111,7 +111,7 @@ import { AuthContext } from "../context/AuthContext";
 //   }, 2000);
 // }
 
-export default function useAnimals({ defaultPage = 1, limit = 12 }) {
+export default function useAnimals({ defaultPage = 1, limit = 8 }) {
   const { token } = useContext(AuthContext);
 
   const [animals, setAnimals] = useState([]);

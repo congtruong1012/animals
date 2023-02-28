@@ -4,13 +4,12 @@ import useAuth from "../hooks/useAuth";
 export const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
-  const nav = useNavigate();
-  const { isLoading, token, handleLogin } = useAuth({
-    onSuccess: () => nav("/"),
-  });
+  const { isLoading, token, handleLogin, handleLogout } = useAuth();
 
   return (
-    <AuthContext.Provider value={{ isLoading, login: handleLogin, token }}>
+    <AuthContext.Provider
+      value={{ isLoading, login: handleLogin, token, handleLogout }}
+    >
       {children}
     </AuthContext.Provider>
   );
